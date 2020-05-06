@@ -19,7 +19,8 @@ public class DoctorController {
 	private static Connection connection;
 	private static PreparedStatement ps;
 	private static ResultSet rs;
-//add
+
+	//add doctor
 	public String AddDoctor(Doctor doctor) {
 		String output = "";
 		try {
@@ -54,7 +55,8 @@ public class DoctorController {
 
 		
 	}
-//read
+
+	//read details
 	public String readDoctors() {
 		String output="";
 		
@@ -100,7 +102,8 @@ public class DoctorController {
 		}
 		return output;
 	}
-//update
+
+	//update details
 	public String updatedoctor(Doctor doctor) {
 		String output = "";
 		try {
@@ -129,7 +132,8 @@ public class DoctorController {
 		}
 		return output;
 	}
-//delete
+
+	//delete details
 	public String deleteDoctor(String Did) {
 		String output = "";
 		try {
@@ -155,7 +159,8 @@ public class DoctorController {
 		return output;
 	}
 	
-//search
+
+	//search details
 	public Doctor searchDoctors(String id) {
 		Doctor doc = new Doctor();
 		try {

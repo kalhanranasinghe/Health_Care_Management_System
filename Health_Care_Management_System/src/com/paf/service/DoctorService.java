@@ -25,6 +25,8 @@ public class DoctorService {
 	
 	DoctorController doctorController = new DoctorController();
 
+	
+	//read
 	@GET
 	@Path("/read")
 	@Produces({ MediaType.TEXT_PLAIN })
@@ -32,6 +34,7 @@ public class DoctorService {
 		return new Gson().toJson(doctorController.readDoctors());
 	}
 
+	//add
 	@POST
 	@Path("/insert")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -49,6 +52,7 @@ public class DoctorService {
 		return doctorController.AddDoctor(doctor);
 	}
 
+	//delete
 	@DELETE
 	@Path("/{id}")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -58,6 +62,7 @@ public class DoctorService {
 	}
 	
 	
+	//update
 	@PUT
 	@Path("/update")
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -75,6 +80,7 @@ public class DoctorService {
 		return doctorController.updatedoctor(doctor);
 	}
 	
+	//search
 	@GET
 	@Path("/search/{id}")
 	@Produces({ MediaType.TEXT_PLAIN })

@@ -11,13 +11,13 @@ $(document).on(
 		function(event) {
 			// alert("save btn clicked");
 
-			// Clear alerts---------------------
+			// Clear alerts-------------------
 			$("#alertSuccess").text("");
 			$("#alertSuccess").hide();
 			$("#alertError").text("");
 			$("#alertError").hide();
 
-			// Form validation-------------------
+			// Form validation-----------------
 			var status = validateItemForm();
 			if (status != true) {
 				$("#alertError").text(status);
@@ -80,7 +80,7 @@ $(document).on("click", ".btnRemove", function(event) {
 	});
 });
 
-// CLIENT-MODEL=========================================
+// CLIENT-MODEL======================================
 function validateItemForm() {
 	// NAME
 	if ($("#doctorname").val().trim() == "") {
@@ -125,7 +125,7 @@ function validateItemForm() {
 	return true;
 }
 
-// -----save completed func-
+// -----save completed function
 function onItemSaveComplete(response, status) {
 	if (status == "success") {
 		var resultSet = JSON.parse(response);
